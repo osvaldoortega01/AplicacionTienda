@@ -3,6 +3,7 @@
 Public Class MenuPrincipal
     Private currentBtn As IconButton
     Private leftBorderBtn As Panel
+    Private currentChildForm As Form
 
     Public Sub New()
         ' This call is required by the designer.
@@ -15,6 +16,22 @@ Public Class MenuPrincipal
 
     End Sub
 
+    Private Sub OpenChildForm(childForm As Form)
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        currentChildForm = childForm
+        childForm.TopLevel = False
+        childForm.FormBorderStyle = FormBorderStyle.None
+        childForm.Dock = DockStyle.Fill
+        PanelDesktop.Controls.Add(childForm)
+        PanelDesktop.Tag = childForm
+        childForm.BringToFront()
+        childForm.Show()
+
+        lblFormTitle.Text = childForm.Text
+
+    End Sub
     Private Sub ActivateButton(senderBtn As Object, customColor As Color)
         If senderBtn IsNot Nothing Then
             DisableButton()
@@ -54,7 +71,7 @@ Public Class MenuPrincipal
 
     Private Sub btn_Inventory_Click(sender As Object, e As EventArgs) Handles btn_Inventory.Click
         ActivateButton(sender, RGBColors.color2)
-
+        OpenChildForm(New ConsultaInventario)
     End Sub
 
     Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
