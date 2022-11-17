@@ -3,6 +3,7 @@
 Public Class MenuPrincipalAdmin
     Private currentBtn As IconButton
     Private leftBorderBtn As Panel
+    Private currentChildForm As Form
 
     Public Sub New()
         ' This call is required by the designer.
@@ -12,6 +13,23 @@ Public Class MenuPrincipalAdmin
         leftBorderBtn = New Panel()
         leftBorderBtn.Size = New Size(7, 60)
         PanelMenu.Controls.Add(leftBorderBtn)
+
+    End Sub
+
+    Private Sub OpenChildForm(childForm As Form)
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        currentChildForm = childForm
+        childForm.TopLevel = False
+        childForm.FormBorderStyle = FormBorderStyle.None
+        childForm.Dock = DockStyle.Fill
+        PanelDesktop.Controls.Add(childForm)
+        PanelDesktop.Tag = childForm
+        childForm.BringToFront()
+        childForm.Show()
+
+        lblFormTitle.Text = childForm.Text
 
     End Sub
 
@@ -50,6 +68,7 @@ Public Class MenuPrincipalAdmin
 
     Private Sub btn_Sale_Click(sender As Object, e As EventArgs) Handles btn_Sale.Click
         ActivateButton(sender, RGBColors.color1)
+        'OpenChildForm(New nombreForm)
     End Sub
 
     Private Sub btn_Inventory_Click(sender As Object, e As EventArgs) Handles btn_Inventory.Click

@@ -24,22 +24,23 @@ Partial Class MenuPrincipalAdmin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuPrincipalAdmin))
         Me.PanelMenu = New System.Windows.Forms.Panel()
-        Me.PanelLogo = New System.Windows.Forms.Panel()
-        Me.PanelTitleBar = New System.Windows.Forms.Panel()
-        Me.lblFormTitle = New System.Windows.Forms.Label()
-        Me.IconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
         Me.IconButton6 = New FontAwesome.Sharp.IconButton()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.btn_Inventory = New FontAwesome.Sharp.IconButton()
         Me.btn_Sale = New FontAwesome.Sharp.IconButton()
+        Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PanelTitleBar = New System.Windows.Forms.Panel()
+        Me.lblFormTitle = New System.Windows.Forms.Label()
+        Me.IconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.PanelDesktop = New System.Windows.Forms.Panel()
         Me.PanelMenu.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTitleBar.SuspendLayout()
         CType(Me.IconCurrentForm, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenu
@@ -56,50 +57,6 @@ Partial Class MenuPrincipalAdmin
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(220, 621)
         Me.PanelMenu.TabIndex = 1
-        '
-        'PanelLogo
-        '
-        Me.PanelLogo.Controls.Add(Me.PictureBox1)
-        Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
-        Me.PanelLogo.Name = "PanelLogo"
-        Me.PanelLogo.Size = New System.Drawing.Size(220, 140)
-        Me.PanelLogo.TabIndex = 0
-        '
-        'PanelTitleBar
-        '
-        Me.PanelTitleBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.PanelTitleBar.Controls.Add(Me.lblFormTitle)
-        Me.PanelTitleBar.Controls.Add(Me.IconCurrentForm)
-        Me.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelTitleBar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.PanelTitleBar.Location = New System.Drawing.Point(220, 0)
-        Me.PanelTitleBar.Name = "PanelTitleBar"
-        Me.PanelTitleBar.Size = New System.Drawing.Size(1021, 75)
-        Me.PanelTitleBar.TabIndex = 2
-        '
-        'lblFormTitle
-        '
-        Me.lblFormTitle.AutoSize = True
-        Me.lblFormTitle.ForeColor = System.Drawing.Color.Gainsboro
-        Me.lblFormTitle.Location = New System.Drawing.Point(66, 32)
-        Me.lblFormTitle.Name = "lblFormTitle"
-        Me.lblFormTitle.Size = New System.Drawing.Size(35, 13)
-        Me.lblFormTitle.TabIndex = 1
-        Me.lblFormTitle.Text = "Home"
-        '
-        'IconCurrentForm
-        '
-        Me.IconCurrentForm.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.IconCurrentForm.ForeColor = System.Drawing.Color.MediumPurple
-        Me.IconCurrentForm.IconChar = FontAwesome.Sharp.IconChar.Home
-        Me.IconCurrentForm.IconColor = System.Drawing.Color.MediumPurple
-        Me.IconCurrentForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconCurrentForm.Location = New System.Drawing.Point(28, 22)
-        Me.IconCurrentForm.Name = "IconCurrentForm"
-        Me.IconCurrentForm.Size = New System.Drawing.Size(32, 32)
-        Me.IconCurrentForm.TabIndex = 0
-        Me.IconCurrentForm.TabStop = False
         '
         'IconButton6
         '
@@ -206,6 +163,15 @@ Partial Class MenuPrincipalAdmin
         Me.btn_Sale.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_Sale.UseVisualStyleBackColor = True
         '
+        'PanelLogo
+        '
+        Me.PanelLogo.Controls.Add(Me.PictureBox1)
+        Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
+        Me.PanelLogo.Name = "PanelLogo"
+        Me.PanelLogo.Size = New System.Drawing.Size(220, 140)
+        Me.PanelLogo.TabIndex = 0
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.AplicacionTienda.My.Resources.Resources.store_logo
@@ -215,6 +181,41 @@ Partial Class MenuPrincipalAdmin
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'PanelTitleBar
+        '
+        Me.PanelTitleBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.PanelTitleBar.Controls.Add(Me.lblFormTitle)
+        Me.PanelTitleBar.Controls.Add(Me.IconCurrentForm)
+        Me.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelTitleBar.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.PanelTitleBar.Location = New System.Drawing.Point(220, 0)
+        Me.PanelTitleBar.Name = "PanelTitleBar"
+        Me.PanelTitleBar.Size = New System.Drawing.Size(1021, 75)
+        Me.PanelTitleBar.TabIndex = 2
+        '
+        'lblFormTitle
+        '
+        Me.lblFormTitle.AutoSize = True
+        Me.lblFormTitle.ForeColor = System.Drawing.Color.Gainsboro
+        Me.lblFormTitle.Location = New System.Drawing.Point(66, 32)
+        Me.lblFormTitle.Name = "lblFormTitle"
+        Me.lblFormTitle.Size = New System.Drawing.Size(35, 13)
+        Me.lblFormTitle.TabIndex = 1
+        Me.lblFormTitle.Text = "Home"
+        '
+        'IconCurrentForm
+        '
+        Me.IconCurrentForm.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.IconCurrentForm.ForeColor = System.Drawing.Color.MediumPurple
+        Me.IconCurrentForm.IconChar = FontAwesome.Sharp.IconChar.Home
+        Me.IconCurrentForm.IconColor = System.Drawing.Color.MediumPurple
+        Me.IconCurrentForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconCurrentForm.Location = New System.Drawing.Point(28, 22)
+        Me.IconCurrentForm.Name = "IconCurrentForm"
+        Me.IconCurrentForm.Size = New System.Drawing.Size(32, 32)
+        Me.IconCurrentForm.TabIndex = 0
+        Me.IconCurrentForm.TabStop = False
         '
         'IconButton1
         '
@@ -228,11 +229,21 @@ Partial Class MenuPrincipalAdmin
         Me.IconButton1.Text = "IconButton1"
         Me.IconButton1.UseVisualStyleBackColor = True
         '
+        'PanelDesktop
+        '
+        Me.PanelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelDesktop.Location = New System.Drawing.Point(220, 75)
+        Me.PanelDesktop.Name = "PanelDesktop"
+        Me.PanelDesktop.Size = New System.Drawing.Size(1021, 546)
+        Me.PanelDesktop.TabIndex = 3
+        '
         'MenuPrincipalAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1241, 621)
+        Me.Controls.Add(Me.PanelDesktop)
         Me.Controls.Add(Me.PanelTitleBar)
         Me.Controls.Add(Me.PanelMenu)
         Me.Controls.Add(Me.IconButton1)
@@ -241,10 +252,10 @@ Partial Class MenuPrincipalAdmin
         Me.Text = "Menú Principal Administrador"
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelLogo.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelTitleBar.ResumeLayout(False)
         Me.PanelTitleBar.PerformLayout()
         CType(Me.IconCurrentForm, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -261,4 +272,5 @@ Partial Class MenuPrincipalAdmin
     Friend WithEvents lblFormTitle As Label
     Friend WithEvents IconCurrentForm As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PanelDesktop As Panel
 End Class
