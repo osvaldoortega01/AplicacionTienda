@@ -5,7 +5,6 @@ D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTiend
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\FontAwesome.Sharp.dll
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.vbproj.AssemblyReference.cache
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.vbproj.SuggestedBindingRedirects.cache
-D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.Form1.resources
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.Resources.resources
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.vbproj.GenerateResource.cache
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.vbproj.CoreCompileInputs.cache
@@ -13,3 +12,5 @@ D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTiend
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.exe
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.xml
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.pdb
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.MenuPrincipal.resources
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.MenuPrincipalAdmin.resources

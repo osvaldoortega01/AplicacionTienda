@@ -1,6 +1,6 @@
 ﻿Imports FontAwesome.Sharp
 
-Public Class Form1
+Public Class MenuPrincipalAdmin
     Private currentBtn As IconButton
     Private leftBorderBtn As Panel
 
@@ -48,7 +48,24 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
-        ActivateButton(sender, Color.SeaGreen)
+    Private Sub btn_Sale_Click(sender As Object, e As EventArgs) Handles btn_Sale.Click
+        ActivateButton(sender, RGBColors.color1)
+    End Sub
+
+    Private Sub btn_Inventory_Click(sender As Object, e As EventArgs) Handles btn_Inventory.Click
+        ActivateButton(sender, RGBColors.color2)
+
+    End Sub
+
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        ActivateButton(sender, RGBColors.color3)
+    End Sub
+
+    Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
+        ActivateButton(sender, RGBColors.color4)
+    End Sub
+
+    Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
+        ActivateButton(sender, RGBColors.color5)
     End Sub
 End Class
