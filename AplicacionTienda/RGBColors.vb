@@ -5,4 +5,5 @@
     Public Shared color4 As Color = Color.FromArgb(95, 77, 221)
     Public Shared color5 As Color = Color.FromArgb(249, 88, 155)
     Public Shared color6 As Color = Color.FromArgb(24, 161, 251)
+    Public Shared Background As Color = Color.FromArgb(31, 30, 68)
 End Structure

@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -110,11 +110,25 @@
     <Compile Include="Administrador\MenuPrincipalAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BD_TiendaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_TiendaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD_TiendaDataSet.vb">
+      <DependentUpon>BD_TiendaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.Designer.vb">
+      <DependentUpon>LogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RGBColors.vb" />
-    <Compile Include="Vendedor\ConsultaInventario.Designer.vb">
+    <Compile Include="Vendedor\Inventario\ConsultaInventario.Designer.vb">
       <DependentUpon>ConsultaInventario.vb</DependentUpon>
     </Compile>
-    <Compile Include="Vendedor\ConsultaInventario.vb">
+    <Compile Include="Vendedor\Inventario\ConsultaInventario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vendedor\MenuPrincipal.vb">
@@ -145,7 +159,10 @@
     <EmbeddedResource Include="Administrador\MenuPrincipalAdmin.resx">
       <DependentUpon>MenuPrincipalAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vendedor\ConsultaInventario.resx">
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\Inventario\ConsultaInventario.resx">
       <DependentUpon>ConsultaInventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vendedor\MenuPrincipal.resx">
@@ -159,6 +176,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="BD_TiendaDataSet.xsc">
+      <DependentUpon>BD_TiendaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD_TiendaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_TiendaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_TiendaDataSet.xss">
+      <DependentUpon>BD_TiendaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -185,6 +213,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BD_Tienda.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\store_logo.png" />
     <Content Include="store_logo_woutText.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
