@@ -152,6 +152,7 @@ Partial Class AgregarProveedor
         '
         Me.cb_category.DataSource = Me.CategoriaBindingSource
         Me.cb_category.DisplayMember = "nombre"
+        Me.cb_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_category.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_category.FormattingEnabled = True
         Me.cb_category.Location = New System.Drawing.Point(84, 287)

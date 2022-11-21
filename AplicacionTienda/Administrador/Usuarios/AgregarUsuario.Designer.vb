@@ -133,6 +133,7 @@ Partial Class AgregarUsuario
         '
         'cb_Type
         '
+        Me.cb_Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_Type.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_Type.FormattingEnabled = True
         Me.cb_Type.Items.AddRange(New Object() {"ADMIN", "VENDEDOR"})
