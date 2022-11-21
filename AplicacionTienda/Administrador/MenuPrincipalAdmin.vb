@@ -71,20 +71,44 @@ Public Class MenuPrincipalAdmin
         'OpenChildForm(New nombreForm)
     End Sub
 
-    Private Sub btn_Inventory_Click(sender As Object, e As EventArgs) Handles btn_Inventory.Click
+    Private Sub btn_Inventory_Click(sender As Object, e As EventArgs) Handles btn_Provider.Click
         ActivateButton(sender, RGBColors.color2)
 
     End Sub
 
-    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+    Private Sub btn_addProvider_Click(sender As Object, e As EventArgs)
         ActivateButton(sender, RGBColors.color3)
     End Sub
 
-    Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
+    Private Sub btn_category_Click(sender As Object, e As EventArgs) Handles btn_category.Click
         ActivateButton(sender, RGBColors.color4)
     End Sub
 
-    Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
+    Private Sub btn_addCategory_Click(sender As Object, e As EventArgs)
         ActivateButton(sender, RGBColors.color5)
+    End Sub
+
+    Private Sub btn_addUser_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btn_user_Click(sender As Object, e As EventArgs) Handles btn_user.Click
+
+    End Sub
+
+    Private Sub IconButton3_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub IconButton6_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub IconButton5_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

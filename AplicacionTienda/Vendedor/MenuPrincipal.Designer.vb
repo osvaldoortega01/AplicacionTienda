@@ -27,15 +27,14 @@ Partial Class MenuPrincipal
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.PanelTitleBar = New System.Windows.Forms.Panel()
         Me.lblFormTitle = New System.Windows.Forms.Label()
+        Me.PanelDesktop = New System.Windows.Forms.Panel()
         Me.IconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
         Me.IconButton6 = New FontAwesome.Sharp.IconButton()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.btn_Inventory = New FontAwesome.Sharp.IconButton()
         Me.btn_Sale = New FontAwesome.Sharp.IconButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.PanelDesktop = New System.Windows.Forms.Panel()
         Me.PanelMenu.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
         Me.PanelTitleBar.SuspendLayout()
@@ -48,7 +47,6 @@ Partial Class MenuPrincipal
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.PanelMenu.Controls.Add(Me.IconButton6)
         Me.PanelMenu.Controls.Add(Me.IconButton5)
-        Me.PanelMenu.Controls.Add(Me.IconButton4)
         Me.PanelMenu.Controls.Add(Me.btn_Inventory)
         Me.PanelMenu.Controls.Add(Me.btn_Sale)
         Me.PanelMenu.Controls.Add(Me.PanelLogo)
@@ -82,12 +80,22 @@ Partial Class MenuPrincipal
         'lblFormTitle
         '
         Me.lblFormTitle.AutoSize = True
+        Me.lblFormTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormTitle.ForeColor = System.Drawing.Color.Gainsboro
-        Me.lblFormTitle.Location = New System.Drawing.Point(66, 32)
+        Me.lblFormTitle.Location = New System.Drawing.Point(66, 26)
         Me.lblFormTitle.Name = "lblFormTitle"
-        Me.lblFormTitle.Size = New System.Drawing.Size(35, 13)
+        Me.lblFormTitle.Size = New System.Drawing.Size(68, 25)
         Me.lblFormTitle.TabIndex = 1
         Me.lblFormTitle.Text = "Home"
+        '
+        'PanelDesktop
+        '
+        Me.PanelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelDesktop.Location = New System.Drawing.Point(220, 75)
+        Me.PanelDesktop.Name = "PanelDesktop"
+        Me.PanelDesktop.Size = New System.Drawing.Size(1021, 546)
+        Me.PanelDesktop.TabIndex = 3
         '
         'IconCurrentForm
         '
@@ -113,7 +121,7 @@ Partial Class MenuPrincipal
         Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton6.IconSize = 32
         Me.IconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton6.Location = New System.Drawing.Point(0, 380)
+        Me.IconButton6.Location = New System.Drawing.Point(0, 320)
         Me.IconButton6.Name = "IconButton6"
         Me.IconButton6.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
         Me.IconButton6.Size = New System.Drawing.Size(220, 60)
@@ -134,7 +142,7 @@ Partial Class MenuPrincipal
         Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton5.IconSize = 32
         Me.IconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton5.Location = New System.Drawing.Point(0, 320)
+        Me.IconButton5.Location = New System.Drawing.Point(0, 260)
         Me.IconButton5.Name = "IconButton5"
         Me.IconButton5.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
         Me.IconButton5.Size = New System.Drawing.Size(220, 60)
@@ -143,27 +151,6 @@ Partial Class MenuPrincipal
         Me.IconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.IconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton5.UseVisualStyleBackColor = True
-        '
-        'IconButton4
-        '
-        Me.IconButton4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IconButton4.FlatAppearance.BorderSize = 0
-        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.Store
-        Me.IconButton4.IconColor = System.Drawing.Color.Gainsboro
-        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton4.IconSize = 32
-        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton4.Location = New System.Drawing.Point(0, 260)
-        Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.IconButton4.Size = New System.Drawing.Size(220, 60)
-        Me.IconButton4.TabIndex = 3
-        Me.IconButton4.Text = "IconButton4"
-        Me.IconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton4.UseVisualStyleBackColor = True
         '
         'btn_Inventory
         '
@@ -229,15 +216,6 @@ Partial Class MenuPrincipal
         Me.IconButton1.Text = "IconButton1"
         Me.IconButton1.UseVisualStyleBackColor = True
         '
-        'PanelDesktop
-        '
-        Me.PanelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
-        Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelDesktop.Location = New System.Drawing.Point(220, 75)
-        Me.PanelDesktop.Name = "PanelDesktop"
-        Me.PanelDesktop.Size = New System.Drawing.Size(1021, 546)
-        Me.PanelDesktop.TabIndex = 3
-        '
         'MenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -266,7 +244,6 @@ Partial Class MenuPrincipal
     Friend WithEvents PanelLogo As Panel
     Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents btn_Inventory As FontAwesome.Sharp.IconButton
     Friend WithEvents PanelTitleBar As Panel
     Friend WithEvents lblFormTitle As Label

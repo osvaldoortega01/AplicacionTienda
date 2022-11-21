@@ -16,7 +16,7 @@ Public Class MenuPrincipal
 
     End Sub
 
-    Private Sub OpenChildForm(childForm As Form)
+    Public Sub OpenChildForm(childForm As Form)
         If currentChildForm IsNot Nothing Then
             currentChildForm.Close()
         End If
@@ -32,7 +32,7 @@ Public Class MenuPrincipal
         lblFormTitle.Text = childForm.Text
 
     End Sub
-    Private Sub ActivateButton(senderBtn As Object, customColor As Color)
+    Public Sub ActivateButton(senderBtn As Object, customColor As Color)
         If senderBtn IsNot Nothing Then
             DisableButton()
             currentBtn = CType(senderBtn, IconButton)
@@ -74,8 +74,9 @@ Public Class MenuPrincipal
         OpenChildForm(New ConsultaInventario)
     End Sub
 
-    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) 
         ActivateButton(sender, RGBColors.color3)
+        OpenChildForm(New AgregarProducto)
     End Sub
 
     Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click

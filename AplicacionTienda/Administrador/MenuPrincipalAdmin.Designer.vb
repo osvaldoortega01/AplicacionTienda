@@ -24,18 +24,17 @@ Partial Class MenuPrincipalAdmin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuPrincipalAdmin))
         Me.PanelMenu = New System.Windows.Forms.Panel()
-        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton5 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
-        Me.btn_Inventory = New FontAwesome.Sharp.IconButton()
+        Me.btn_user = New FontAwesome.Sharp.IconButton()
+        Me.btn_category = New FontAwesome.Sharp.IconButton()
+        Me.btn_Provider = New FontAwesome.Sharp.IconButton()
         Me.btn_Sale = New FontAwesome.Sharp.IconButton()
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelTitleBar = New System.Windows.Forms.Panel()
         Me.lblFormTitle = New System.Windows.Forms.Label()
         Me.IconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.PanelDesktop = New System.Windows.Forms.Panel()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.PanelMenu.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,10 +45,9 @@ Partial Class MenuPrincipalAdmin
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
-        Me.PanelMenu.Controls.Add(Me.IconButton6)
-        Me.PanelMenu.Controls.Add(Me.IconButton5)
-        Me.PanelMenu.Controls.Add(Me.IconButton4)
-        Me.PanelMenu.Controls.Add(Me.btn_Inventory)
+        Me.PanelMenu.Controls.Add(Me.btn_user)
+        Me.PanelMenu.Controls.Add(Me.btn_category)
+        Me.PanelMenu.Controls.Add(Me.btn_Provider)
         Me.PanelMenu.Controls.Add(Me.btn_Sale)
         Me.PanelMenu.Controls.Add(Me.PanelLogo)
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
@@ -58,89 +56,68 @@ Partial Class MenuPrincipalAdmin
         Me.PanelMenu.Size = New System.Drawing.Size(220, 621)
         Me.PanelMenu.TabIndex = 1
         '
-        'IconButton6
+        'btn_user
         '
-        Me.IconButton6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IconButton6.FlatAppearance.BorderSize = 0
-        Me.IconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton6.ForeColor = System.Drawing.Color.Gainsboro
-        Me.IconButton6.IconChar = FontAwesome.Sharp.IconChar.Store
-        Me.IconButton6.IconColor = System.Drawing.Color.Gainsboro
-        Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton6.IconSize = 32
-        Me.IconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton6.Location = New System.Drawing.Point(0, 380)
-        Me.IconButton6.Name = "IconButton6"
-        Me.IconButton6.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.IconButton6.Size = New System.Drawing.Size(220, 60)
-        Me.IconButton6.TabIndex = 5
-        Me.IconButton6.Text = "IconButton6"
-        Me.IconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton6.UseVisualStyleBackColor = True
+        Me.btn_user.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_user.FlatAppearance.BorderSize = 0
+        Me.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_user.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btn_user.IconChar = FontAwesome.Sharp.IconChar.Store
+        Me.btn_user.IconColor = System.Drawing.Color.Gainsboro
+        Me.btn_user.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btn_user.IconSize = 32
+        Me.btn_user.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_user.Location = New System.Drawing.Point(0, 320)
+        Me.btn_user.Name = "btn_user"
+        Me.btn_user.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_user.Size = New System.Drawing.Size(220, 60)
+        Me.btn_user.TabIndex = 6
+        Me.btn_user.Text = "Usuarios"
+        Me.btn_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_user.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_user.UseVisualStyleBackColor = True
         '
-        'IconButton5
+        'btn_category
         '
-        Me.IconButton5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IconButton5.FlatAppearance.BorderSize = 0
-        Me.IconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton5.ForeColor = System.Drawing.Color.Gainsboro
-        Me.IconButton5.IconChar = FontAwesome.Sharp.IconChar.Store
-        Me.IconButton5.IconColor = System.Drawing.Color.Gainsboro
-        Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton5.IconSize = 32
-        Me.IconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton5.Location = New System.Drawing.Point(0, 320)
-        Me.IconButton5.Name = "IconButton5"
-        Me.IconButton5.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.IconButton5.Size = New System.Drawing.Size(220, 60)
-        Me.IconButton5.TabIndex = 4
-        Me.IconButton5.Text = "IconButton5"
-        Me.IconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton5.UseVisualStyleBackColor = True
+        Me.btn_category.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_category.FlatAppearance.BorderSize = 0
+        Me.btn_category.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_category.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btn_category.IconChar = FontAwesome.Sharp.IconChar.Store
+        Me.btn_category.IconColor = System.Drawing.Color.Gainsboro
+        Me.btn_category.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btn_category.IconSize = 32
+        Me.btn_category.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_category.Location = New System.Drawing.Point(0, 260)
+        Me.btn_category.Name = "btn_category"
+        Me.btn_category.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_category.Size = New System.Drawing.Size(220, 60)
+        Me.btn_category.TabIndex = 4
+        Me.btn_category.Text = "Categorías"
+        Me.btn_category.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_category.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_category.UseVisualStyleBackColor = True
         '
-        'IconButton4
+        'btn_Provider
         '
-        Me.IconButton4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.IconButton4.FlatAppearance.BorderSize = 0
-        Me.IconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.Store
-        Me.IconButton4.IconColor = System.Drawing.Color.Gainsboro
-        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton4.IconSize = 32
-        Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton4.Location = New System.Drawing.Point(0, 260)
-        Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.IconButton4.Size = New System.Drawing.Size(220, 60)
-        Me.IconButton4.TabIndex = 3
-        Me.IconButton4.Text = "IconButton4"
-        Me.IconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton4.UseVisualStyleBackColor = True
-        '
-        'btn_Inventory
-        '
-        Me.btn_Inventory.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btn_Inventory.FlatAppearance.BorderSize = 0
-        Me.btn_Inventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Inventory.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btn_Inventory.IconChar = FontAwesome.Sharp.IconChar.Store
-        Me.btn_Inventory.IconColor = System.Drawing.Color.Gainsboro
-        Me.btn_Inventory.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btn_Inventory.IconSize = 32
-        Me.btn_Inventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Inventory.Location = New System.Drawing.Point(0, 200)
-        Me.btn_Inventory.Name = "btn_Inventory"
-        Me.btn_Inventory.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_Inventory.Size = New System.Drawing.Size(220, 60)
-        Me.btn_Inventory.TabIndex = 2
-        Me.btn_Inventory.Text = "Inventario"
-        Me.btn_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_Inventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_Inventory.UseVisualStyleBackColor = True
+        Me.btn_Provider.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_Provider.FlatAppearance.BorderSize = 0
+        Me.btn_Provider.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_Provider.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btn_Provider.IconChar = FontAwesome.Sharp.IconChar.Store
+        Me.btn_Provider.IconColor = System.Drawing.Color.Gainsboro
+        Me.btn_Provider.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btn_Provider.IconSize = 32
+        Me.btn_Provider.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_Provider.Location = New System.Drawing.Point(0, 200)
+        Me.btn_Provider.Name = "btn_Provider"
+        Me.btn_Provider.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_Provider.Size = New System.Drawing.Size(220, 60)
+        Me.btn_Provider.TabIndex = 2
+        Me.btn_Provider.Text = "Proveedores"
+        Me.btn_Provider.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_Provider.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_Provider.UseVisualStyleBackColor = True
         '
         'btn_Sale
         '
@@ -217,6 +194,15 @@ Partial Class MenuPrincipalAdmin
         Me.IconCurrentForm.TabIndex = 0
         Me.IconCurrentForm.TabStop = False
         '
+        'PanelDesktop
+        '
+        Me.PanelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelDesktop.Location = New System.Drawing.Point(220, 75)
+        Me.PanelDesktop.Name = "PanelDesktop"
+        Me.PanelDesktop.Size = New System.Drawing.Size(1021, 546)
+        Me.PanelDesktop.TabIndex = 3
+        '
         'IconButton1
         '
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
@@ -228,15 +214,6 @@ Partial Class MenuPrincipalAdmin
         Me.IconButton1.TabIndex = 0
         Me.IconButton1.Text = "IconButton1"
         Me.IconButton1.UseVisualStyleBackColor = True
-        '
-        'PanelDesktop
-        '
-        Me.PanelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelDesktop.Location = New System.Drawing.Point(220, 75)
-        Me.PanelDesktop.Name = "PanelDesktop"
-        Me.PanelDesktop.Size = New System.Drawing.Size(1021, 546)
-        Me.PanelDesktop.TabIndex = 3
         '
         'MenuPrincipalAdmin
         '
@@ -264,13 +241,12 @@ Partial Class MenuPrincipalAdmin
     Friend WithEvents PanelMenu As Panel
     Friend WithEvents btn_Sale As FontAwesome.Sharp.IconButton
     Friend WithEvents PanelLogo As Panel
-    Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
-    Friend WithEvents btn_Inventory As FontAwesome.Sharp.IconButton
+    Friend WithEvents btn_category As FontAwesome.Sharp.IconButton
+    Friend WithEvents btn_Provider As FontAwesome.Sharp.IconButton
     Friend WithEvents PanelTitleBar As Panel
     Friend WithEvents lblFormTitle As Label
     Friend WithEvents IconCurrentForm As FontAwesome.Sharp.IconPictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PanelDesktop As Panel
+    Friend WithEvents btn_user As FontAwesome.Sharp.IconButton
 End Class

@@ -17,3 +17,5 @@ D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTiend
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.ConsultaInventario.resources
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\BD_Tienda.accdb
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.LogIn.resources
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.AgregarProducto.resources
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.ConsultaCategoria.resources
