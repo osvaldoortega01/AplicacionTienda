@@ -200,6 +200,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Vendedor\Venta\Venta.Designer.vb">
+      <DependentUpon>Venta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\Venta\Venta.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Administrador\Categorias\AgregarCategoria.resx">
@@ -240,6 +246,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\Venta\Venta.resx">
+      <DependentUpon>Venta.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,10 @@ Public Class ConsultaInventario
     End Sub
 
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        If txt_search.Text Is "" Then
+            Me.ProductoTableAdapter.FillAll(Me.BD_TiendaDataSet.producto)
+            Return
+        End If
         Me.ProductoTableAdapter.FillByName(Me.BD_TiendaDataSet.producto, txt_search.Text)
     End Sub
 
@@ -30,4 +34,5 @@ Public Class ConsultaInventario
         Me.ProductoTableAdapter.DeleteQuery(Convert.ToInt32(lbl_idProduct.Text))
         MessageBox.Show("El producto se eliminó correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
 End Class

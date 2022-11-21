@@ -8,6 +8,10 @@ Public Class ConsultaCategoria
     End Sub
 
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        If txt_search.Text Is "" Then
+            Me.CategoriaTableAdapter.Fill(Me.BD_TiendaDataSet.categoria)
+            Return
+        End If
         Me.CategoriaTableAdapter.FillByName(Me.BD_TiendaDataSet.categoria, txt_search.Text)
     End Sub
 
@@ -28,7 +32,7 @@ Public Class ConsultaCategoria
     Private Sub btn_deleteCategory_Click(sender As Object, e As EventArgs) Handles btn_deleteCategory.Click
         Try
             Me.CategoriaTableAdapter.DeleteQuery(Convert.ToInt32(lbl_idCategory.Text))
-            MessageBox.Show("El producto se eliminó correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("La categoría se eliminó correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
             Throw ex
         End Try

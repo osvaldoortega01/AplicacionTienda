@@ -67,6 +67,7 @@ Public Class MenuPrincipal
 
     Private Sub btn_Sale_Click(sender As Object, e As EventArgs) Handles btn_Sale.Click
         ActivateButton(sender, RGBColors.color1)
+        OpenChildForm(New Venta)
     End Sub
 
     Private Sub btn_Inventory_Click(sender As Object, e As EventArgs) Handles btn_Inventory.Click

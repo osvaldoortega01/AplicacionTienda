@@ -29,3 +29,4 @@ D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTiend
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.AgregarProveedor.resources
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.ConsultaUsuarios.resources
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.AgregarUsuario.resources
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.Venta.resources

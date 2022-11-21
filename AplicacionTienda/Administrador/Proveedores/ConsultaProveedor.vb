@@ -6,6 +6,10 @@
     End Sub
 
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        If txt_search.Text = "" Then
+            Me.ProveedorTableAdapter.FillAll(Me.BD_TiendaDataSet.proveedor)
+            Return
+        End If
         Me.ProveedorTableAdapter.FillByName(Me.BD_TiendaDataSet.proveedor, txt_search.Text)
     End Sub
     Private Sub btn_addProvider_Click(sender As Object, e As EventArgs) Handles btn_addProvider.Click

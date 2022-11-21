@@ -6,6 +6,9 @@
     End Sub
 
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        If txt_search.Text Is Nothing Then
+            Me.UsuarioTableAdapter.Fill(Me.BD_TiendaDataSet.usuario)
+        End If
         Me.UsuarioTableAdapter.FillByName(Me.BD_TiendaDataSet.usuario, txt_search.Text)
     End Sub
 
