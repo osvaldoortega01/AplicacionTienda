@@ -136,6 +136,7 @@ Partial Class AgregarProducto
         '
         Me.nud_price.DecimalPlaces = 2
         Me.nud_price.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nud_price.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
         Me.nud_price.Location = New System.Drawing.Point(139, 173)
         Me.nud_price.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.nud_price.Name = "nud_price"

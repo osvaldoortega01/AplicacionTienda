@@ -74,7 +74,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -104,6 +106,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\Categorias\AgregarCategoria.Designer.vb">
+      <DependentUpon>AgregarCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Categorias\AgregarCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Administrador\Categorias\ConsultaCategoria.Designer.vb">
       <DependentUpon>ConsultaCategoria.vb</DependentUpon>
     </Compile>
@@ -116,13 +124,39 @@
     <Compile Include="Administrador\MenuPrincipalAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Administrador\Proveedores\ConsultaProveedor.Designer.vb">
+      <DependentUpon>ConsultaProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Proveedores\ConsultaProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Proveedores\AgregarProveedor.Designer.vb">
+      <DependentUpon>AgregarProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Proveedores\AgregarProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Usuarios\AgregarUsuario.Designer.vb">
+      <DependentUpon>AgregarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Usuarios\AgregarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Usuarios\ConsultaUsuarios.Designer.vb">
+      <DependentUpon>ConsultaUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Usuarios\ConsultaUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BD_TiendaDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_TiendaDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="BD_TiendaDataSet.vb">
       <DependentUpon>BD_TiendaDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="LogIn.Designer.vb">
       <DependentUpon>LogIn.vb</DependentUpon>
@@ -168,11 +202,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Administrador\Categorias\AgregarCategoria.resx">
+      <DependentUpon>AgregarCategoria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\Categorias\ConsultaCategoria.resx">
       <DependentUpon>ConsultaCategoria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\MenuPrincipalAdmin.resx">
       <DependentUpon>MenuPrincipalAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Proveedores\ConsultaProveedor.resx">
+      <DependentUpon>ConsultaProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Proveedores\AgregarProveedor.resx">
+      <DependentUpon>AgregarProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Usuarios\AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Usuarios\ConsultaUsuarios.resx">
+      <DependentUpon>ConsultaUsuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.vb</DependentUpon>
@@ -196,14 +245,17 @@
   <ItemGroup>
     <None Include="BD_TiendaDataSet.xsc">
       <DependentUpon>BD_TiendaDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="BD_TiendaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>BD_TiendaDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="BD_TiendaDataSet.xss">
       <DependentUpon>BD_TiendaDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
@@ -237,9 +289,6 @@
     <None Include="Resources\store_logo.png" />
     <Content Include="store_logo_woutText.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Administrador\Proveedores\" />
-    <Folder Include="Administrador\Usuarios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

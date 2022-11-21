@@ -31,6 +31,7 @@ Partial Class MenuPrincipalAdmin
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelTitleBar = New System.Windows.Forms.Panel()
+        Me.btn_logout = New FontAwesome.Sharp.IconButton()
         Me.lblFormTitle = New System.Windows.Forms.Label()
         Me.IconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
         Me.PanelDesktop = New System.Windows.Forms.Panel()
@@ -62,7 +63,7 @@ Partial Class MenuPrincipalAdmin
         Me.btn_user.FlatAppearance.BorderSize = 0
         Me.btn_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_user.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btn_user.IconChar = FontAwesome.Sharp.IconChar.Store
+        Me.btn_user.IconChar = FontAwesome.Sharp.IconChar.UserCheck
         Me.btn_user.IconColor = System.Drawing.Color.Gainsboro
         Me.btn_user.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btn_user.IconSize = 32
@@ -162,6 +163,7 @@ Partial Class MenuPrincipalAdmin
         'PanelTitleBar
         '
         Me.PanelTitleBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.PanelTitleBar.Controls.Add(Me.btn_logout)
         Me.PanelTitleBar.Controls.Add(Me.lblFormTitle)
         Me.PanelTitleBar.Controls.Add(Me.IconCurrentForm)
         Me.PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top
@@ -170,6 +172,24 @@ Partial Class MenuPrincipalAdmin
         Me.PanelTitleBar.Name = "PanelTitleBar"
         Me.PanelTitleBar.Size = New System.Drawing.Size(1021, 75)
         Me.PanelTitleBar.TabIndex = 2
+        '
+        'btn_logout
+        '
+        Me.btn_logout.BackColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btn_logout.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btn_logout.FlatAppearance.BorderSize = 0
+        Me.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_logout.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket
+        Me.btn_logout.IconColor = System.Drawing.Color.Black
+        Me.btn_logout.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btn_logout.Location = New System.Drawing.Point(905, 0)
+        Me.btn_logout.Name = "btn_logout"
+        Me.btn_logout.Size = New System.Drawing.Size(116, 75)
+        Me.btn_logout.TabIndex = 2
+        Me.btn_logout.Text = "Cerrar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Sesión"
+        Me.btn_logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_logout.UseVisualStyleBackColor = False
         '
         'lblFormTitle
         '
@@ -249,4 +269,5 @@ Partial Class MenuPrincipalAdmin
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PanelDesktop As Panel
     Friend WithEvents btn_user As FontAwesome.Sharp.IconButton
+    Friend WithEvents btn_logout As FontAwesome.Sharp.IconButton
 End Class

@@ -87,4 +87,8 @@ Public Class MenuPrincipal
         ActivateButton(sender, RGBColors.color5)
     End Sub
 
+    Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
+        Me.Hide()
+        LogIn.Show()
+    End Sub
 End Class

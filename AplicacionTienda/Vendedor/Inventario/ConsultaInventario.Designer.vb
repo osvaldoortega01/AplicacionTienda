@@ -34,6 +34,7 @@ Partial Class ConsultaInventario
         Me.btn_addInventory = New FontAwesome.Sharp.IconButton()
         Me.btn_updateInventory = New FontAwesome.Sharp.IconButton()
         Me.btn_deleteInventory = New FontAwesome.Sharp.IconButton()
+        Me.lbl_idProduct = New System.Windows.Forms.Label()
         Me.IdProductoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrecioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,7 +43,6 @@ Partial Class ConsultaInventario
         Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BD_TiendaDataSet = New AplicacionTienda.BD_TiendaDataSet()
         Me.ProductoTableAdapter = New AplicacionTienda.BD_TiendaDataSetTableAdapters.productoTableAdapter()
-        Me.lbl_idProduct = New System.Windows.Forms.Label()
         CType(Me.dgv_products, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDesktop.SuspendLayout()
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -165,6 +165,16 @@ Partial Class ConsultaInventario
         Me.btn_deleteInventory.Text = "Eliminar producto seleccionado"
         Me.btn_deleteInventory.UseVisualStyleBackColor = True
         '
+        'lbl_idProduct
+        '
+        Me.lbl_idProduct.AutoSize = True
+        Me.lbl_idProduct.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
+        Me.lbl_idProduct.Location = New System.Drawing.Point(683, 428)
+        Me.lbl_idProduct.Name = "lbl_idProduct"
+        Me.lbl_idProduct.Size = New System.Drawing.Size(52, 13)
+        Me.lbl_idProduct.TabIndex = 10
+        Me.lbl_idProduct.Text = "idProduct"
+        '
         'IdProductoDataGridViewTextBoxColumn
         '
         Me.IdProductoDataGridViewTextBoxColumn.DataPropertyName = "idProducto"
@@ -221,16 +231,6 @@ Partial Class ConsultaInventario
         'ProductoTableAdapter
         '
         Me.ProductoTableAdapter.ClearBeforeFill = True
-        '
-        'lbl_idProduct
-        '
-        Me.lbl_idProduct.AutoSize = True
-        Me.lbl_idProduct.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
-        Me.lbl_idProduct.Location = New System.Drawing.Point(683, 428)
-        Me.lbl_idProduct.Name = "lbl_idProduct"
-        Me.lbl_idProduct.Size = New System.Drawing.Size(52, 13)
-        Me.lbl_idProduct.TabIndex = 10
-        Me.lbl_idProduct.Text = "idProduct"
         '
         'ConsultaInventario
         '

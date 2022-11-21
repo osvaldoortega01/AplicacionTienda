@@ -32,7 +32,7 @@ Public Class AgregarProducto
             End If
             txt_name.Text = ""
             nud_price.Text = ""
-            cb_category.Text = ""
+            cb_category.SelectedValue = Nothing
             nud_stock.Text = ""
         Catch ex As Exception
             MsgBox("Ocurrio un error inesperado")

@@ -19,3 +19,13 @@ D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTiend
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.LogIn.resources
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.AgregarProducto.resources
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.ConsultaCategoria.resources
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\BD_TiendaDataSet.Designer.vb
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\BD_TiendaDataSet.vb
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\BD_TiendaDataSet.xsc
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\BD_TiendaDataSet.xsd
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\BD_TiendaDataSet.xss
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.AgregarCategoria.resources
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.ConsultaProveedor.resources
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.AgregarProveedor.resources
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.ConsultaUsuarios.resources
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.AgregarUsuario.resources

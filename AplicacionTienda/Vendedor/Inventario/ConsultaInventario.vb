@@ -10,19 +10,6 @@ Public Class ConsultaInventario
 
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
         Me.ProductoTableAdapter.FillByName(Me.BD_TiendaDataSet.producto, txt_search.Text)
-        MenuPrincipal.OpenChildForm(New AgregarProducto)
-    End Sub
-
-    Private Sub txt_search_TextChanged(sender As Object, e As EventArgs) Handles txt_search.TextChanged
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub dgv_products_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_products.CellContentClick
-
     End Sub
 
     Private Sub btn_addInventory_Click(sender As Object, e As EventArgs) Handles btn_addInventory.Click
@@ -37,5 +24,10 @@ Public Class ConsultaInventario
         agregarProducto.idProduct = Convert.ToInt32(lbl_idProduct.Text)
         agregarProducto.esActualizar = True
         MenuPrincipal.OpenChildForm(agregarProducto)
+    End Sub
+
+    Private Sub btn_deleteInventory_Click(sender As Object, e As EventArgs) Handles btn_deleteInventory.Click
+        Me.ProductoTableAdapter.DeleteQuery(Convert.ToInt32(lbl_idProduct.Text))
+        MessageBox.Show("El producto se eliminó correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

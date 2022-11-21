@@ -16,20 +16,25 @@ Public Class MenuPrincipalAdmin
 
     End Sub
 
-    Private Sub OpenChildForm(childForm As Form)
-        If currentChildForm IsNot Nothing Then
-            currentChildForm.Close()
-        End If
-        currentChildForm = childForm
-        childForm.TopLevel = False
-        childForm.FormBorderStyle = FormBorderStyle.None
-        childForm.Dock = DockStyle.Fill
-        PanelDesktop.Controls.Add(childForm)
-        PanelDesktop.Tag = childForm
-        childForm.BringToFront()
-        childForm.Show()
+    Public Sub OpenChildForm(childForm As Form)
+        Try
+            If currentChildForm IsNot Nothing Then
+                currentChildForm.Close()
+            End If
+            currentChildForm = childForm
+            childForm.TopLevel = False
+            childForm.FormBorderStyle = FormBorderStyle.None
+            childForm.Dock = DockStyle.Fill
+            PanelDesktop.Controls.Add(childForm)
+            PanelDesktop.Tag = childForm
+            childForm.BringToFront()
+            childForm.Show()
 
-        lblFormTitle.Text = childForm.Text
+            lblFormTitle.Text = childForm.Text
+        Catch ex As Exception
+            Me.Show()
+        End Try
+
 
     End Sub
 
@@ -73,42 +78,22 @@ Public Class MenuPrincipalAdmin
 
     Private Sub btn_Inventory_Click(sender As Object, e As EventArgs) Handles btn_Provider.Click
         ActivateButton(sender, RGBColors.color2)
-
-    End Sub
-
-    Private Sub btn_addProvider_Click(sender As Object, e As EventArgs)
-        ActivateButton(sender, RGBColors.color3)
+        OpenChildForm(New ConsultaProveedor)
     End Sub
 
     Private Sub btn_category_Click(sender As Object, e As EventArgs) Handles btn_category.Click
         ActivateButton(sender, RGBColors.color4)
+        OpenChildForm(New ConsultaCategoria)
     End Sub
 
-    Private Sub btn_addCategory_Click(sender As Object, e As EventArgs)
-        ActivateButton(sender, RGBColors.color5)
-    End Sub
-
-    Private Sub btn_addUser_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub btn_user_Click(sender As Object, e As EventArgs) Handles btn_user.Click
-
+        ActivateButton(sender, RGBColors.color4)
+        OpenChildForm(New ConsultaUsuarios)
     End Sub
 
-    Private Sub IconButton3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub IconButton6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub IconButton5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub IconButton4_Click(sender As Object, e As EventArgs)
-
+    Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
+        Me.Hide()
+        LogIn.Show()
     End Sub
 End Class

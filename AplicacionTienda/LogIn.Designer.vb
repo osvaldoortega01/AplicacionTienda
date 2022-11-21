@@ -24,14 +24,14 @@ Partial Class LogIn
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LogIn))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txt_user = New System.Windows.Forms.TextBox()
         Me.txt_password = New System.Windows.Forms.TextBox()
         Me.lbl_Usuario = New System.Windows.Forms.Label()
         Me.lbl_Contrasena = New System.Windows.Forms.Label()
         Me.lbl_ForgotPW = New System.Windows.Forms.LinkLabel()
-        Me.btn_Login = New FontAwesome.Sharp.IconButton()
         Me.cb_isAdmin = New System.Windows.Forms.CheckBox()
+        Me.btn_Login = New FontAwesome.Sharp.IconButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -45,17 +45,6 @@ Partial Class LogIn
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(400, 450)
         Me.Panel1.TabIndex = 0
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = Global.AplicacionTienda.My.Resources.Resources.store_logo1
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(400, 450)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'txt_user
         '
@@ -72,6 +61,7 @@ Partial Class LogIn
         Me.txt_password.Name = "txt_password"
         Me.txt_password.Size = New System.Drawing.Size(271, 26)
         Me.txt_password.TabIndex = 2
+        Me.txt_password.UseSystemPasswordChar = True
         '
         'lbl_Usuario
         '
@@ -106,6 +96,17 @@ Partial Class LogIn
         Me.lbl_ForgotPW.TabStop = True
         Me.lbl_ForgotPW.Text = "¿OIvidaste tu contraseña?"
         '
+        'cb_isAdmin
+        '
+        Me.cb_isAdmin.AutoSize = True
+        Me.cb_isAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cb_isAdmin.Location = New System.Drawing.Point(101, 304)
+        Me.cb_isAdmin.Name = "cb_isAdmin"
+        Me.cb_isAdmin.Size = New System.Drawing.Size(183, 24)
+        Me.cb_isAdmin.TabIndex = 7
+        Me.cb_isAdmin.Text = "¿Es administrador?"
+        Me.cb_isAdmin.UseVisualStyleBackColor = True
+        '
         'btn_Login
         '
         Me.btn_Login.IconChar = FontAwesome.Sharp.IconChar.UserAlt
@@ -120,16 +121,16 @@ Partial Class LogIn
         Me.btn_Login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_Login.UseVisualStyleBackColor = True
         '
-        'cb_isAdmin
+        'PictureBox1
         '
-        Me.cb_isAdmin.AutoSize = True
-        Me.cb_isAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cb_isAdmin.Location = New System.Drawing.Point(101, 304)
-        Me.cb_isAdmin.Name = "cb_isAdmin"
-        Me.cb_isAdmin.Size = New System.Drawing.Size(183, 24)
-        Me.cb_isAdmin.TabIndex = 7
-        Me.cb_isAdmin.Text = "¿Es administrador?"
-        Me.cb_isAdmin.UseVisualStyleBackColor = True
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = Global.AplicacionTienda.My.Resources.Resources.store_logo1
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(400, 450)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'LogIn
         '
@@ -158,10 +159,10 @@ Partial Class LogIn
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents txt_user As TextBox
-    Friend WithEvents txt_password As TextBox
     Friend WithEvents lbl_Usuario As Label
     Friend WithEvents lbl_Contrasena As Label
     Friend WithEvents lbl_ForgotPW As LinkLabel
     Friend WithEvents btn_Login As FontAwesome.Sharp.IconButton
     Friend WithEvents cb_isAdmin As CheckBox
+    Private WithEvents txt_password As TextBox
 End Class

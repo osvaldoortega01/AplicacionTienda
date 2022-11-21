@@ -46,6 +46,8 @@ Public Class LogIn
                 MenuPrincipal.Show()
             End If
             Me.Hide()
+            txt_user.Text = ""
+            txt_password.Text = ""
         Else
             MsgBox("Credenciales incorrectas, intente nuevamente", MsgBoxStyle.Critical)
         End If
