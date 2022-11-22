@@ -2,6 +2,8 @@
 Imports System.Data.Common
 Imports System.Data.OleDb
 Imports System.Windows.Navigation
+Imports OpenQA.Selenium
+Imports OpenQA.Selenium.Chrome
 
 Public Class LogIn
 

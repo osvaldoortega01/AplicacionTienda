@@ -30,3 +30,17 @@ D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTiend
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.ConsultaUsuarios.resources
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.AgregarUsuario.resources
 D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\obj\Debug\AplicacionTienda.Venta.resources
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\selenium-manager\linux\selenium-manager
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\selenium-manager\macos\selenium-manager
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\selenium-manager\windows\selenium-manager.exe
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\Appium.Net.dll
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\Castle.Core.dll
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\Newtonsoft.Json.dll
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\SeleniumExtras.PageObjects.dll
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\WebDriver.dll
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\WebDriver.Support.dll
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\Appium.Net.xml
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\Castle.Core.xml
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\Newtonsoft.Json.xml
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\System.dll
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\AplicacionTienda\bin\Debug\System.xml
