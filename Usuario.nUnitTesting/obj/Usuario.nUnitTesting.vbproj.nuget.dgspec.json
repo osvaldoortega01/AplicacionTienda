@@ -1,0 +1,108 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Users\\osval\\Documents\\Personal\\School\\VerificacionyValidacion\\AplicacionTienda\\Usuario.nUnitTesting\\Usuario.nUnitTesting.vbproj": {}
+  },
+  "projects": {
+    "D:\\Users\\osval\\Documents\\Personal\\School\\VerificacionyValidacion\\AplicacionTienda\\AplicacionTienda\\AplicacionTienda.vbproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Users\\osval\\Documents\\Personal\\School\\VerificacionyValidacion\\AplicacionTienda\\AplicacionTienda\\AplicacionTienda.vbproj",
+        "projectName": "AplicacionTienda",
+        "projectPath": "D:\\Users\\osval\\Documents\\Personal\\School\\VerificacionyValidacion\\AplicacionTienda\\AplicacionTienda\\AplicacionTienda.vbproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "D:\\Users\\osval\\Documents\\Personal\\School\\VerificacionyValidacion\\AplicacionTienda\\Usuario.nUnitTesting\\Usuario.nUnitTesting.vbproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\osval\\Documents\\Personal\\School\\VerificacionyValidacion\\AplicacionTienda\\Usuario.nUnitTesting\\Usuario.nUnitTesting.vbproj",
+        "projectName": "Usuario.nUnitTesting",
+        "projectPath": "D:\\Users\\osval\\Documents\\Personal\\School\\VerificacionyValidacion\\AplicacionTienda\\Usuario.nUnitTesting\\Usuario.nUnitTesting.vbproj",
+        "packagesPath": "C:\\Users\\osval\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\osval\\Documents\\Personal\\School\\VerificacionyValidacion\\AplicacionTienda\\Usuario.nUnitTesting\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\osval\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Users\\osval\\Documents\\Personal\\School\\VerificacionyValidacion\\AplicacionTienda\\AplicacionTienda\\AplicacionTienda.vbproj": {
+                "projectPath": "D:\\Users\\osval\\Documents\\Personal\\School\\VerificacionyValidacion\\AplicacionTienda\\AplicacionTienda\\AplicacionTienda.vbproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
