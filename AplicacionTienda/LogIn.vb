@@ -1,11 +1,4 @@
-﻿Imports System.Collections.ObjectModel
-Imports System.Data.Common
-Imports System.Data.OleDb
-Imports System.Windows.Navigation
-Imports OpenQA.Selenium
-Imports OpenQA.Selenium.Chrome
-
-Public Class LogIn
+﻿Public Class LogIn
 
     Private Sub btn_Login_Click(sender As Object, e As EventArgs) Handles btn_Login.Click
 
@@ -28,17 +21,7 @@ Public Class LogIn
     End Sub
 
     Private Function LogIn(type As String) As Integer
-        Dim connection As New OleDbConnection(My.Settings.BD_TiendaConnectionString)
-        If connection.State = ConnectionState.Closed Then
-            connection.Open()
-        End If
-        Dim cmd As New OleDbCommand("", connection)
-
-        cmd = New OleDbCommand("SELECT COUNT (*) FROM USUARIO WHERE usuario = ? and contrasena = ? and tipo = ?", connection)
-        cmd.Parameters.AddWithValue("@1", OleDbType.VarChar).Value = txt_user.Text
-        cmd.Parameters.AddWithValue("@2", OleDbType.VarChar).Value = txt_password.Text
-        cmd.Parameters.AddWithValue("@3", OleDbType.VarChar).Value = type
-        Dim count = Convert.ToInt32(cmd.ExecuteScalar())
+        Dim count = Me.UsuarioTableAdapter.CountByUserPWType(txt_user.Text, txt_password.Text, type)
 
         If count > 0 Then
             MsgBox("Inicio Sesion exitosamente", MsgBoxStyle.Information)
@@ -57,4 +40,17 @@ Public Class LogIn
         Return count
     End Function
 
+    Private Sub UsuarioBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.UsuarioBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.BD_TiendaDataSet)
+
+    End Sub
+
+    Private Sub UsuarioBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.UsuarioBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.BD_TiendaDataSet)
+
+    End Sub
 End Class

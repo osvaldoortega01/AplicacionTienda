@@ -352,8 +352,8 @@ Partial Public Class BD_TiendaDataSet
         fkc = New Global.System.Data.ForeignKeyConstraint("usuarioVenta", New Global.System.Data.DataColumn() {Me.tableusuario.idUsuarioColumn}, New Global.System.Data.DataColumn() {Me.tableventa.idUsuarioColumn})
         Me.tableventa.Constraints.Add(fkc)
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
-        fkc.DeleteRule = Global.System.Data.Rule.None
-        fkc.UpdateRule = Global.System.Data.Rule.None
+        fkc.DeleteRule = Global.System.Data.Rule.SetDefault
+        fkc.UpdateRule = Global.System.Data.Rule.SetDefault
         Me.relationcategoriaproducto = New Global.System.Data.DataRelation("categoriaproducto", New Global.System.Data.DataColumn() {Me.tablecategoria.idCategoriaColumn}, New Global.System.Data.DataColumn() {Me.tableproducto.idCategoriaColumn}, false)
         Me.Relations.Add(Me.relationcategoriaproducto)
         Me.relationcategoriaproveedor = New Global.System.Data.DataRelation("categoriaproveedor", New Global.System.Data.DataColumn() {Me.tablecategoria.idCategoriaColumn}, New Global.System.Data.DataColumn() {Me.tableproveedor.idCategoriaColumn}, false)
@@ -5526,7 +5526,7 @@ Namespace BD_TiendaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(6) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(7) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT idUsuario, nombre, tipo, direccion, telefono, correo, usuario, contrasena "& _ 
@@ -5544,32 +5544,26 @@ Namespace BD_TiendaDataSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nombre", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "DELETE FROM `usuario` WHERE (`idUsuario` = ?)"
+            Me._commandCollection(3).CommandText = "SELECT COUNT(*) FROM usuario WHERE usuario = ? AND contrasena = ? AND tipo = ?"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("idUsuario", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("usuario", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "usuario", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("contrasena", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "contrasena", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("tipo", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "tipo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(4) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "SELECT contrasena, correo, direccion, idUsuario, nombre, telefono, tipo, usuario "& _ 
-                "FROM usuario WHERE (nombre = ?)"
+            Me._commandCollection(4).CommandText = "DELETE FROM `usuario` WHERE (`idUsuario` = ?)"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nombre", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("idUsuario", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._commandCollection(5) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(5).Connection = Me.Connection
-            Me._commandCollection(5).CommandText = "INSERT INTO `usuario` (`nombre`, `tipo`, `direccion`, `telefono`, `correo`, `usua"& _ 
-                "rio`, `contrasena`) VALUES (?, ?, ?, ?, ?, ?, ?)"
+            Me._commandCollection(5).CommandText = "SELECT contrasena, correo, direccion, idUsuario, nombre, telefono, tipo, usuario "& _ 
+                "FROM usuario WHERE (nombre = ?)"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nombre", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("tipo", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "tipo", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("direccion", Global.System.Data.OleDb.OleDbType.WChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "direccion", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("telefono", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "telefono", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("correo", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "correo", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("usuario", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "usuario", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("contrasena", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "contrasena", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(6) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(6).Connection = Me.Connection
-            Me._commandCollection(6).CommandText = "UPDATE       usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                nombre = ?, tipo = ?, direccion = ?, tel"& _ 
-                "efono = ?, correo = ?, usuario = ?, contrasena = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (idUsuario = ?)"& _ 
-                ""
+            Me._commandCollection(6).CommandText = "INSERT INTO `usuario` (`nombre`, `tipo`, `direccion`, `telefono`, `correo`, `usua"& _ 
+                "rio`, `contrasena`) VALUES (?, ?, ?, ?, ?, ?, ?)"
             Me._commandCollection(6).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nombre", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("tipo", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "tipo", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -5578,7 +5572,20 @@ Namespace BD_TiendaDataSetTableAdapters
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("correo", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "correo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("usuario", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "usuario", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("contrasena", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "contrasena", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._commandCollection(6).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_idUsuario", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._commandCollection(7) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(7).Connection = Me.Connection
+            Me._commandCollection(7).CommandText = "UPDATE       usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                nombre = ?, tipo = ?, direccion = ?, tel"& _ 
+                "efono = ?, correo = ?, usuario = ?, contrasena = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (idUsuario = ?)"& _ 
+                ""
+            Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nombre", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("tipo", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "tipo", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("direccion", Global.System.Data.OleDb.OleDbType.WChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "direccion", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("telefono", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "telefono", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("correo", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "correo", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("usuario", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "usuario", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("contrasena", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "contrasena", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_idUsuario", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5610,7 +5617,7 @@ Namespace BD_TiendaDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function FillByName(ByVal dataTable As BD_TiendaDataSet.usuarioDataTable, ByVal nombre As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(4)
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
             If (nombre Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -5628,7 +5635,7 @@ Namespace BD_TiendaDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetDataByName(ByVal nombre As String) As BD_TiendaDataSet.usuarioDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(4)
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
             If (nombre Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -5782,10 +5789,51 @@ Namespace BD_TiendaDataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function CountByUserPWType(ByVal usuario As String, ByVal contrasena As String, ByVal tipo As String) As Global.System.Nullable(Of Integer)
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(3)
+            If (usuario Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(0).Value = CType(usuario,String)
+            End If
+            If (contrasena Is Nothing) Then
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(1).Value = CType(contrasena,String)
+            End If
+            If (tipo Is Nothing) Then
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(2).Value = CType(tipo,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Object
+            Try 
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return New Global.System.Nullable(Of Integer)()
+            Else
+                Return New Global.System.Nullable(Of Integer)(CType(returnValue,Integer))
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
         Public Overloads Overridable Function DeleteQuery(ByVal idUsuario As Global.System.Nullable(Of Integer)) As Integer
-            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(3)
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(4)
             If (idUsuario.HasValue = true) Then
                 command.Parameters(0).Value = CType(idUsuario.Value,Integer)
             Else
@@ -5812,7 +5860,7 @@ Namespace BD_TiendaDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
         Public Overloads Overridable Function InsertQuery(ByVal nombre As String, ByVal tipo As String, ByVal direccion As String, ByVal telefono As String, ByVal correo As String, ByVal usuario As String, ByVal contrasena As String) As Integer
-            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(5)
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(6)
             If (nombre Is Nothing) Then
                 command.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -5869,7 +5917,7 @@ Namespace BD_TiendaDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
         Public Overloads Overridable Function UpdateQuery(ByVal nombre As String, ByVal tipo As String, ByVal direccion As String, ByVal telefono As String, ByVal correo As String, ByVal usuario As String, ByVal contrasena As String, ByVal Original_idUsuario As Integer) As Integer
-            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(6)
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(7)
             If (nombre Is Nothing) Then
                 command.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -6114,11 +6162,16 @@ Namespace BD_TiendaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT idVenta, fecha, idUsuario, metodoPago, total FROM venta"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT COUNT(*) FROM venta WHERE idUsuario = ?"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("idUsuario", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "idUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6329,6 +6382,37 @@ Namespace BD_TiendaDataSetTableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function SearchByIDUser(ByVal idUsuario As Global.System.Nullable(Of Integer)) As Global.System.Nullable(Of Integer)
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(1)
+            If (idUsuario.HasValue = true) Then
+                command.Parameters(0).Value = CType(idUsuario.Value,Integer)
+            Else
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Object
+            Try 
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return New Global.System.Nullable(Of Integer)()
+            Else
+                Return New Global.System.Nullable(Of Integer)(CType(returnValue,Integer))
+            End If
         End Function
     End Class
     

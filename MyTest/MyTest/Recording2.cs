@@ -24,29 +24,29 @@ namespace MyTest
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Recording1 recording.
+    ///The Recording2 recording.
     /// </summary>
-    [TestModule("62544184-0689-4263-bd4b-5d9f25eb8ace", ModuleType.Recording, 1)]
-    public partial class Recording1 : ITestModule
+    [TestModule("5dfe349e-55d1-457d-9c4f-e744b983575a", ModuleType.Recording, 1)]
+    public partial class Recording2 : ITestModule
     {
         /// <summary>
         /// Holds an instance of the MyTestRepository repository.
         /// </summary>
         public static MyTestRepository repo = MyTestRepository.Instance;
 
-        static Recording1 instance = new Recording1();
+        static Recording2 instance = new Recording2();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Recording1()
+        public Recording2()
         {
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Recording1 Instance
+        public static Recording2 Instance
         {
             get { return instance; }
         }

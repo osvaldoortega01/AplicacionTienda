@@ -78,7 +78,7 @@ Public Class AgregarUsuario
     End Function
 
     Private Function idExist(field As Object, mensajeExcepcion As String)
-        Dim numeroUsuarios = UsuarioTableAdapter1.CountByName(field)
+        Dim numeroUsuarios = UsuarioTableAdapter1.CountById(field)
         If numeroUsuarios = 0 Then
             Throw New Exception(mensajeExcepcion)
         End If

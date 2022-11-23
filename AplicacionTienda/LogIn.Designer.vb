@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class LogIn
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,12 @@ Partial Class LogIn
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LogIn))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txt_user = New System.Windows.Forms.TextBox()
         Me.txt_password = New System.Windows.Forms.TextBox()
         Me.lbl_Usuario = New System.Windows.Forms.Label()
@@ -31,9 +33,14 @@ Partial Class LogIn
         Me.lbl_ForgotPW = New System.Windows.Forms.LinkLabel()
         Me.cb_isAdmin = New System.Windows.Forms.CheckBox()
         Me.btn_Login = New FontAwesome.Sharp.IconButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BD_TiendaDataSet = New AplicacionTienda.BD_TiendaDataSet()
+        Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UsuarioTableAdapter = New AplicacionTienda.BD_TiendaDataSetTableAdapters.usuarioTableAdapter()
+        Me.TableAdapterManager = New AplicacionTienda.BD_TiendaDataSetTableAdapters.TableAdapterManager()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_TiendaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -41,10 +48,21 @@ Partial Class LogIn
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(400, 0)
+        Me.Panel1.Location = New System.Drawing.Point(401, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(400, 450)
         Me.Panel1.TabIndex = 0
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = Global.AplicacionTienda.My.Resources.Resources.store_logo1
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(400, 450)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'txt_user
         '
@@ -121,23 +139,37 @@ Partial Class LogIn
         Me.btn_Login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_Login.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'BD_TiendaDataSet
         '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = Global.AplicacionTienda.My.Resources.Resources.store_logo1
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(400, 450)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.BD_TiendaDataSet.DataSetName = "BD_TiendaDataSet"
+        Me.BD_TiendaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UsuarioBindingSource
+        '
+        Me.UsuarioBindingSource.DataMember = "usuario"
+        Me.UsuarioBindingSource.DataSource = Me.BD_TiendaDataSet
+        '
+        'UsuarioTableAdapter
+        '
+        Me.UsuarioTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.categoriaTableAdapter = Nothing
+        Me.TableAdapterManager.productoTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = AplicacionTienda.BD_TiendaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usuarioTableAdapter = Me.UsuarioTableAdapter
+        Me.TableAdapterManager.ventaDetalleTableAdapter = Nothing
+        Me.TableAdapterManager.ventaTableAdapter = Nothing
         '
         'LogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(801, 450)
         Me.Controls.Add(Me.cb_isAdmin)
         Me.Controls.Add(Me.btn_Login)
         Me.Controls.Add(Me.lbl_ForgotPW)
@@ -151,6 +183,8 @@ Partial Class LogIn
         Me.Text = "Iniciar Sesión"
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_TiendaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -165,4 +199,8 @@ Partial Class LogIn
     Friend WithEvents btn_Login As FontAwesome.Sharp.IconButton
     Friend WithEvents cb_isAdmin As CheckBox
     Private WithEvents txt_password As TextBox
+    Friend WithEvents BD_TiendaDataSet As BD_TiendaDataSet
+    Friend WithEvents UsuarioBindingSource As BindingSource
+    Friend WithEvents UsuarioTableAdapter As BD_TiendaDataSetTableAdapters.usuarioTableAdapter
+    Friend WithEvents TableAdapterManager As BD_TiendaDataSetTableAdapters.TableAdapterManager
 End Class
