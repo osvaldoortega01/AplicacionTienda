@@ -23,6 +23,7 @@
         Dim agregarUsuario As New AgregarUsuario
         agregarUsuario.idUser = lbl_idUser.Text
         agregarUsuario.esActualizar = True
+        agregarUsuario.Text = "Actualizar usuario"
         MenuPrincipalAdmin.OpenChildForm(agregarUsuario)
     End Sub
 

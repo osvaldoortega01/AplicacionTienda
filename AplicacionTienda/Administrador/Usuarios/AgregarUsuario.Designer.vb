@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AgregarUsuario
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class AgregarUsuario
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.txt_email = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txt_address = New System.Windows.Forms.TextBox()
@@ -39,6 +40,11 @@ Partial Class AgregarUsuario
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.btn_add = New FontAwesome.Sharp.IconButton()
         Me.UsuarioTableAdapter1 = New AplicacionTienda.BD_TiendaDataSetTableAdapters.usuarioTableAdapter()
+        Me.BD_TiendaDataSet = New AplicacionTienda.BD_TiendaDataSet()
+        Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TableAdapterManager = New AplicacionTienda.BD_TiendaDataSetTableAdapters.TableAdapterManager()
+        CType(Me.BD_TiendaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txt_email
@@ -206,19 +212,40 @@ Partial Class AgregarUsuario
         Me.btn_add.Name = "btn_add"
         Me.btn_add.Size = New System.Drawing.Size(263, 68)
         Me.btn_add.TabIndex = 32
-        Me.btn_add.Text = "Agregar Proveedor"
+        Me.btn_add.Text = "Agregar Usuario"
         Me.btn_add.UseVisualStyleBackColor = True
         '
         'UsuarioTableAdapter1
         '
         Me.UsuarioTableAdapter1.ClearBeforeFill = True
         '
+        'BD_TiendaDataSet
+        '
+        Me.BD_TiendaDataSet.DataSetName = "BD_TiendaDataSet"
+        Me.BD_TiendaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UsuarioBindingSource
+        '
+        Me.UsuarioBindingSource.DataMember = "usuario"
+        Me.UsuarioBindingSource.DataSource = Me.BD_TiendaDataSet
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.categoriaTableAdapter = Nothing
+        Me.TableAdapterManager.productoTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = AplicacionTienda.BD_TiendaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usuarioTableAdapter = Me.UsuarioTableAdapter1
+        Me.TableAdapterManager.ventaDetalleTableAdapter = Nothing
+        Me.TableAdapterManager.ventaTableAdapter = Nothing
+        '
         'AgregarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(813, 450)
         Me.Controls.Add(Me.IconButton1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txt_password)
@@ -236,7 +263,9 @@ Partial Class AgregarUsuario
         Me.Controls.Add(Me.txt_name)
         Me.Controls.Add(Me.Label1)
         Me.Name = "AgregarUsuario"
-        Me.Text = "AgregarUsuario"
+        Me.Text = "Agregar Usuario"
+        CType(Me.BD_TiendaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -258,4 +287,7 @@ Partial Class AgregarUsuario
     Friend WithEvents Label4 As Label
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents UsuarioTableAdapter1 As BD_TiendaDataSetTableAdapters.usuarioTableAdapter
+    Friend WithEvents BD_TiendaDataSet As BD_TiendaDataSet
+    Friend WithEvents UsuarioBindingSource As BindingSource
+    Friend WithEvents TableAdapterManager As BD_TiendaDataSetTableAdapters.TableAdapterManager
 End Class

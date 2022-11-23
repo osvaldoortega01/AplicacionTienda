@@ -5,6 +5,10 @@ VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AplicacionTienda", "AplicacionTienda\AplicacionTienda.vbproj", "{04C99163-BB89-447C-A77E-81EBE0F9FCA5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{8BFFE3EC-CE61-4010-95B8-6801BD428CED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{B90D6299-F36F-4D10-8029-A5259A5CBAD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{04C99163-BB89-447C-A77E-81EBE0F9FCA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04C99163-BB89-447C-A77E-81EBE0F9FCA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04C99163-BB89-447C-A77E-81EBE0F9FCA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90D6299-F36F-4D10-8029-A5259A5CBAD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90D6299-F36F-4D10-8029-A5259A5CBAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90D6299-F36F-4D10-8029-A5259A5CBAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90D6299-F36F-4D10-8029-A5259A5CBAD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B90D6299-F36F-4D10-8029-A5259A5CBAD3} = {8BFFE3EC-CE61-4010-95B8-6801BD428CED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3718196C-BC6A-48D8-9911-DD3A3FFC6E35}

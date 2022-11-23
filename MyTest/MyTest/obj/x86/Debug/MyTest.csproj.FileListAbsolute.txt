@@ -1,0 +1,10 @@
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\MyTest\MyTest\bin\Debug\MyTest.rxtmg
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\MyTest\MyTest\bin\Debug\MyTest.rxtst
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\MyTest\MyTest\bin\Debug\MyTest.exe.config
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\MyTest\MyTest\bin\Debug\MyTest.xml
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\MyTest\MyTest\bin\Debug\MyTest.exe
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\MyTest\MyTest\bin\Debug\MyTest.pdb
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\MyTest\MyTest\bin\Debug\Ranorex.Core.Resolver.dll
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\MyTest\MyTest\obj\x86\Debug\MyTest.csprojResolveAssemblyReference.cache
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\MyTest\MyTest\obj\x86\Debug\MyTest.exe
+D:\Users\osval\Documents\Personal\School\VerificacionyValidacion\AplicacionTienda\MyTest\MyTest\obj\x86\Debug\MyTest.pdb
