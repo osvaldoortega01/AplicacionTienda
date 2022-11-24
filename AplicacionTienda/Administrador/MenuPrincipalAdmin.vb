@@ -4,7 +4,7 @@ Public Class MenuPrincipalAdmin
     Private currentBtn As IconButton
     Private leftBorderBtn As Panel
     Private currentChildForm As Form
-
+    Public nombre As String
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -93,7 +93,11 @@ Public Class MenuPrincipalAdmin
     End Sub
 
     Private Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
-        Me.Hide()
         LogIn.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub MenuPrincipalAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbl_nombre.Text = nombre
     End Sub
 End Class

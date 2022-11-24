@@ -26,6 +26,7 @@
         If count > 0 Then
             MsgBox("Inicio Sesion exitosamente", MsgBoxStyle.Information)
             If type = "ADMIN" Then
+                MenuPrincipalAdmin.nombre = Me.UsuarioTableAdapter.GetTableNameByUserPW(txt_user.Text, txt_password.Text).Rows(0)("nombre")
                 MenuPrincipalAdmin.Show()
             Else
                 MenuPrincipal.Show()

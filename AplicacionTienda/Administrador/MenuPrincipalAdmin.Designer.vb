@@ -36,11 +36,14 @@ Partial Class MenuPrincipalAdmin
         Me.IconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
         Me.PanelDesktop = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lbl_nombre = New System.Windows.Forms.Label()
         Me.PanelMenu.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTitleBar.SuspendLayout()
         CType(Me.IconCurrentForm, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelDesktop.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelMenu
@@ -194,10 +197,11 @@ Partial Class MenuPrincipalAdmin
         'lblFormTitle
         '
         Me.lblFormTitle.AutoSize = True
+        Me.lblFormTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormTitle.ForeColor = System.Drawing.Color.Gainsboro
-        Me.lblFormTitle.Location = New System.Drawing.Point(66, 32)
+        Me.lblFormTitle.Location = New System.Drawing.Point(86, 21)
         Me.lblFormTitle.Name = "lblFormTitle"
-        Me.lblFormTitle.Size = New System.Drawing.Size(35, 13)
+        Me.lblFormTitle.Size = New System.Drawing.Size(93, 33)
         Me.lblFormTitle.TabIndex = 1
         Me.lblFormTitle.Text = "Home"
         '
@@ -208,15 +212,18 @@ Partial Class MenuPrincipalAdmin
         Me.IconCurrentForm.IconChar = FontAwesome.Sharp.IconChar.Home
         Me.IconCurrentForm.IconColor = System.Drawing.Color.MediumPurple
         Me.IconCurrentForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconCurrentForm.Location = New System.Drawing.Point(28, 22)
+        Me.IconCurrentForm.IconSize = 47
+        Me.IconCurrentForm.Location = New System.Drawing.Point(28, 12)
         Me.IconCurrentForm.Name = "IconCurrentForm"
-        Me.IconCurrentForm.Size = New System.Drawing.Size(32, 32)
+        Me.IconCurrentForm.Size = New System.Drawing.Size(52, 47)
         Me.IconCurrentForm.TabIndex = 0
         Me.IconCurrentForm.TabStop = False
         '
         'PanelDesktop
         '
         Me.PanelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.PanelDesktop.Controls.Add(Me.lbl_nombre)
+        Me.PanelDesktop.Controls.Add(Me.Label1)
         Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelDesktop.Location = New System.Drawing.Point(220, 75)
         Me.PanelDesktop.Name = "PanelDesktop"
@@ -234,6 +241,28 @@ Partial Class MenuPrincipalAdmin
         Me.IconButton1.TabIndex = 0
         Me.IconButton1.Text = "IconButton1"
         Me.IconButton1.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.Location = New System.Drawing.Point(56, 101)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(446, 73)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Bienvenido (a)"
+        '
+        'lbl_nombre
+        '
+        Me.lbl_nombre.AutoSize = True
+        Me.lbl_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_nombre.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lbl_nombre.Location = New System.Drawing.Point(56, 221)
+        Me.lbl_nombre.Name = "lbl_nombre"
+        Me.lbl_nombre.Size = New System.Drawing.Size(260, 73)
+        Me.lbl_nombre.TabIndex = 1
+        Me.lbl_nombre.Text = "Nombre"
         '
         'MenuPrincipalAdmin
         '
@@ -253,6 +282,8 @@ Partial Class MenuPrincipalAdmin
         Me.PanelTitleBar.ResumeLayout(False)
         Me.PanelTitleBar.PerformLayout()
         CType(Me.IconCurrentForm, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelDesktop.ResumeLayout(False)
+        Me.PanelDesktop.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -270,4 +301,6 @@ Partial Class MenuPrincipalAdmin
     Friend WithEvents PanelDesktop As Panel
     Friend WithEvents btn_user As FontAwesome.Sharp.IconButton
     Friend WithEvents btn_logout As FontAwesome.Sharp.IconButton
+    Friend WithEvents lbl_nombre As Label
+    Friend WithEvents Label1 As Label
 End Class

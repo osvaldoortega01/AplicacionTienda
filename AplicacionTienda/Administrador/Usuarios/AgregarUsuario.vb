@@ -1,4 +1,6 @@
-﻿Imports System.Windows.Media.Animation
+﻿Imports System.Net
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports System.Windows.Media.Animation
 Imports AplicacionTienda.BD_TiendaDataSetTableAdapters
 
 Public Class AgregarUsuario
@@ -15,9 +17,18 @@ Public Class AgregarUsuario
     Private usernameDuplEx = "El nombre de usuario ya existe"
     Private idnotexistEx = "No se actualizó correctamente. El id del usuario no existe"
     Private Sub AgregarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If esActualizar Then
-            btn_add.Text = "Actualizar Usuario"
+        If esActualizar = False Then
+            Return
         End If
+
+        btn_add.Text = "Actualizar Usuario"
+        txt_name.Text = UsuarioTableAdapter1.GetDataById(idUser).Rows(0)("nombre")
+        'txt_password.Text = UsuarioTableAdapter1.GetDataBy6(idUser).Rows(0)("contrasena")
+        txt_address.Text = UsuarioTableAdapter1.GetDataById(idUser).Rows(0)("direccion")
+        txt_phone.Text = UsuarioTableAdapter1.GetDataById(idUser).Rows(0)("telefono")
+        txt_email.Text = UsuarioTableAdapter1.GetDataById(idUser).Rows(0)("correo")
+        cb_Type.Text = UsuarioTableAdapter1.GetDataById(idUser).Rows(0)("tipo")
+        txt_user.Text = UsuarioTableAdapter1.GetDataById(idUser).Rows(0)("usuario")
     End Sub
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         txt_password.UseSystemPasswordChar = Not txt_password.UseSystemPasswordChar

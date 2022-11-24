@@ -29,6 +29,12 @@ Partial Class Venta
         Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CategoriaTableAdapter = New AplicacionTienda.BD_TiendaDataSetTableAdapters.categoriaTableAdapter()
         Me.dgv_products = New System.Windows.Forms.DataGridView()
+        Me.IdProductoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCategoriaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombreCategoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ExistenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductoTableAdapter = New AplicacionTienda.BD_TiendaDataSetTableAdapters.productoTableAdapter()
         Me.btn_search = New FontAwesome.Sharp.IconButton()
@@ -42,13 +48,11 @@ Partial Class Venta
         Me.txt_Total = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dgv_Cart = New System.Windows.Forms.DataGridView()
+        Me.idProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
-        Me.IdProductoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrecioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCategoriaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombreCategoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExistenciaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_subTotal = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -56,10 +60,6 @@ Partial Class Venta
         Me.lbl_Price = New System.Windows.Forms.Label()
         Me.lbl_name = New System.Windows.Forms.Label()
         Me.lbl_stock = New System.Windows.Forms.Label()
-        Me.idProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.BD_TiendaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_products, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -105,6 +105,52 @@ Partial Class Venta
         Me.dgv_products.ReadOnly = True
         Me.dgv_products.Size = New System.Drawing.Size(403, 309)
         Me.dgv_products.TabIndex = 6
+        '
+        'IdProductoDataGridViewTextBoxColumn
+        '
+        Me.IdProductoDataGridViewTextBoxColumn.DataPropertyName = "idProducto"
+        Me.IdProductoDataGridViewTextBoxColumn.HeaderText = "idProducto"
+        Me.IdProductoDataGridViewTextBoxColumn.Name = "IdProductoDataGridViewTextBoxColumn"
+        Me.IdProductoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdProductoDataGridViewTextBoxColumn.Visible = False
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PrecioDataGridViewTextBoxColumn
+        '
+        Me.PrecioDataGridViewTextBoxColumn.DataPropertyName = "precio"
+        Me.PrecioDataGridViewTextBoxColumn.HeaderText = "Precio"
+        Me.PrecioDataGridViewTextBoxColumn.Name = "PrecioDataGridViewTextBoxColumn"
+        Me.PrecioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PrecioDataGridViewTextBoxColumn.Width = 60
+        '
+        'IdCategoriaDataGridViewTextBoxColumn
+        '
+        Me.IdCategoriaDataGridViewTextBoxColumn.DataPropertyName = "idCategoria"
+        Me.IdCategoriaDataGridViewTextBoxColumn.HeaderText = "idCategoria"
+        Me.IdCategoriaDataGridViewTextBoxColumn.Name = "IdCategoriaDataGridViewTextBoxColumn"
+        Me.IdCategoriaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdCategoriaDataGridViewTextBoxColumn.Visible = False
+        '
+        'nombreCategoria
+        '
+        Me.nombreCategoria.DataPropertyName = "nombreCategoria"
+        Me.nombreCategoria.FillWeight = 150.0!
+        Me.nombreCategoria.HeaderText = "Categoría"
+        Me.nombreCategoria.Name = "nombreCategoria"
+        Me.nombreCategoria.ReadOnly = True
+        '
+        'ExistenciaDataGridViewTextBoxColumn
+        '
+        Me.ExistenciaDataGridViewTextBoxColumn.DataPropertyName = "existencia"
+        Me.ExistenciaDataGridViewTextBoxColumn.HeaderText = "Existencia"
+        Me.ExistenciaDataGridViewTextBoxColumn.Name = "ExistenciaDataGridViewTextBoxColumn"
+        Me.ExistenciaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ProductoBindingSource
         '
@@ -246,6 +292,31 @@ Partial Class Venta
         Me.dgv_Cart.Size = New System.Drawing.Size(400, 246)
         Me.dgv_Cart.TabIndex = 17
         '
+        'idProducto
+        '
+        Me.idProducto.HeaderText = "idProducto"
+        Me.idProducto.Name = "idProducto"
+        Me.idProducto.ReadOnly = True
+        Me.idProducto.Visible = False
+        '
+        'producto
+        '
+        Me.producto.HeaderText = "Producto"
+        Me.producto.Name = "producto"
+        Me.producto.ReadOnly = True
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        '
+        'precio
+        '
+        Me.precio.HeaderText = "Precio"
+        Me.precio.Name = "precio"
+        Me.precio.ReadOnly = True
+        '
         'IconButton4
         '
         Me.IconButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -258,52 +329,6 @@ Partial Class Venta
         Me.IconButton4.TabIndex = 19
         Me.IconButton4.Text = "Vender"
         Me.IconButton4.UseVisualStyleBackColor = True
-        '
-        'IdProductoDataGridViewTextBoxColumn
-        '
-        Me.IdProductoDataGridViewTextBoxColumn.DataPropertyName = "idProducto"
-        Me.IdProductoDataGridViewTextBoxColumn.HeaderText = "idProducto"
-        Me.IdProductoDataGridViewTextBoxColumn.Name = "IdProductoDataGridViewTextBoxColumn"
-        Me.IdProductoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdProductoDataGridViewTextBoxColumn.Visible = False
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PrecioDataGridViewTextBoxColumn
-        '
-        Me.PrecioDataGridViewTextBoxColumn.DataPropertyName = "precio"
-        Me.PrecioDataGridViewTextBoxColumn.HeaderText = "Precio"
-        Me.PrecioDataGridViewTextBoxColumn.Name = "PrecioDataGridViewTextBoxColumn"
-        Me.PrecioDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PrecioDataGridViewTextBoxColumn.Width = 60
-        '
-        'IdCategoriaDataGridViewTextBoxColumn
-        '
-        Me.IdCategoriaDataGridViewTextBoxColumn.DataPropertyName = "idCategoria"
-        Me.IdCategoriaDataGridViewTextBoxColumn.HeaderText = "idCategoria"
-        Me.IdCategoriaDataGridViewTextBoxColumn.Name = "IdCategoriaDataGridViewTextBoxColumn"
-        Me.IdCategoriaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdCategoriaDataGridViewTextBoxColumn.Visible = False
-        '
-        'nombreCategoria
-        '
-        Me.nombreCategoria.DataPropertyName = "nombreCategoria"
-        Me.nombreCategoria.FillWeight = 150.0!
-        Me.nombreCategoria.HeaderText = "Categoría"
-        Me.nombreCategoria.Name = "nombreCategoria"
-        Me.nombreCategoria.ReadOnly = True
-        '
-        'ExistenciaDataGridViewTextBoxColumn
-        '
-        Me.ExistenciaDataGridViewTextBoxColumn.DataPropertyName = "existencia"
-        Me.ExistenciaDataGridViewTextBoxColumn.HeaderText = "Existencia"
-        Me.ExistenciaDataGridViewTextBoxColumn.Name = "ExistenciaDataGridViewTextBoxColumn"
-        Me.ExistenciaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Label4
         '
@@ -374,31 +399,6 @@ Partial Class Venta
         Me.lbl_stock.Size = New System.Drawing.Size(33, 13)
         Me.lbl_stock.TabIndex = 26
         Me.lbl_stock.Text = "stock"
-        '
-        'idProducto
-        '
-        Me.idProducto.HeaderText = "idProducto"
-        Me.idProducto.Name = "idProducto"
-        Me.idProducto.ReadOnly = True
-        Me.idProducto.Visible = False
-        '
-        'producto
-        '
-        Me.producto.HeaderText = "Producto"
-        Me.producto.Name = "producto"
-        Me.producto.ReadOnly = True
-        '
-        'cantidad
-        '
-        Me.cantidad.HeaderText = "Cantidad"
-        Me.cantidad.Name = "cantidad"
-        Me.cantidad.ReadOnly = True
-        '
-        'precio
-        '
-        Me.precio.HeaderText = "Precio"
-        Me.precio.Name = "precio"
-        Me.precio.ReadOnly = True
         '
         'Venta
         '

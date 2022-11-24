@@ -38,4 +38,8 @@
         txt_IVA.Text = 0
         txt_Total.Text = 0
     End Sub
+
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+
+    End Sub
 End Class
